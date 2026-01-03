@@ -1,0 +1,206 @@
+{
+  "info": {
+    "_postman_id": "a7fe2190-6287-4439-a516-364bd87fe508",
+    "name": "microservice-sample",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "7487842"
+  },
+  "item": [
+    {
+      "name": "Products",
+      "item": [
+        {
+          "name": "add-product",
+          "id": "3bc0a090-b488-4c1f-a0c3-adca16cbbe4a",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"productName\" : \"Samsung S23 Ultra\",\r\n    \"productPrice\" : 80000\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8000/api/products",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "products"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "all-products",
+          "id": "011fb98d-c4a6-40a4-81cc-6dcf6342c9d3",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8000/api/products",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "products"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "single-product",
+          "id": "23ac0309-bf7e-4889-a814-561707afef17",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8000/api/products/5",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "products",
+                "5"
+              ]
+            }
+          },
+          "response": []
+        }
+      ],
+      "id": "9b122982-b457-4ecf-961c-c538a8fe191f"
+    },
+    {
+      "name": "Orders",
+      "item": [
+        {
+          "name": "place-orders",
+          "id": "43edb24c-3bd0-49ca-ac43-39586b6beb34",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"productId\": 2,\r\n    \"quantity\": 8\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8000/api/orders/placeOrders",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "orders",
+                "placeOrders"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "all-orders",
+          "id": "373ec0d4-14aa-4317-8afb-76bce3fd3357",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"productId\": 1,\r\n    \"quantity\": 2\r\n}"
+            },
+            "url": {
+              "raw": "http://localhost:8000/api/orders",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "orders"
+              ]
+            }
+          },
+          "response": []
+        }
+      ],
+      "id": "36c1bba3-ede1-4000-b114-3b82ddb877ea"
+    },
+    {
+      "name": "Actuator",
+      "item": [
+        {
+          "name": "gateway-routes",
+          "id": "b2205b9b-0227-4857-8e8b-d1a4e93dc038",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8000/actuator/gateway/routes",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8000",
+              "path": [
+                "actuator",
+                "gateway",
+                "routes"
+              ]
+            }
+          },
+          "response": []
+        }
+      ],
+      "id": "08f2cb32-8a87-46c9-bb02-3e606115cf11"
+    }
+  ]
+}
